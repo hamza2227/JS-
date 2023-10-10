@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="app.js"></script>
+
+    <style>
+        #btn {
+            color: white;
+            background-color: brown;
+            padding: 8px 12px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        #box {
+            background-color: chartreuse;
+            width: 100px;
+            height: 100px;
+            transition: 1.5s ease all;
+            cursor: pointer;
+        }
+
+        #popBtn {
+            padding: 8px 12px;
+            color: #fff;
+            background: blueviolet;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">Click to Animate</button><br><br>
+
+    <div id="box"></div>
+
+    <!-- <form id="form" action="#" method="post">
+        <h2>Fill this form</h2>
+        <input type="text" id="email" placeholder="Email"><br><br>
+        <input type="password" id="pswd" placeholder="Password"><br><br>
+        <input type="number" id="age" placeholder="Age"><br><br>
+        <button type="submit" id="submit">Submit</button><br><br>
+    </form> -->
+
+
+    <!-- <button onclick="alert('Clicked')">Click Me</button> -->
+    <!-- <button id="btn_1"><span>Click Me</span></button> -->
+    <!-- <a href="#" id="btn_1">Click Me</a> -->
+    <!-- <button id="btn">Click Me</button>
+    <button id="btn_2">Click Me</button>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, expedita rerum similique nulla officia hic,
+        libero vel ipsam culpa fugit repellendus eaque aperiam corporis quis iste quisquam excepturi voluptates.
+        Numquam.
+    </p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, expedita rerum similique nulla officia hic,
+        libero vel ipsam culpa fugit repellendus eaque aperiam corporis quis iste quisquam excepturi voluptates.
+        Numquam.
+    </p> -->
+
+
+    <!-- <div id="container">
+        <div id="linkBox">
+            <li class="link">Link1</li>
+            <li class="link">Link2</li>
+            <li class="link">Link3</li>
+        </div>
+    </div> -->
+
+    <!-- <div class="container"> -->
+
+    <!-- <button id="popBtn">Click to Open</button> -->
+
+
+
+    </div>
+
+
+    <script>
+
+        // Browser object module
+
+        // console.log(window.innerHeight + " | " + window.innerWidth);
+        // var myNewWindow = window.open("", "New Window", "width = 400, height = 400");
+        // myNewWindow.document.write("My New Window")
+
+        // var popBtn = document.getElementById("popBtn");
+        // popBtn.onclick = function () {
+        //     window.open("https://www.youtube.com/", "New Window", "width = 400, height = 400");
+        // }
+
+        // var popBtn = document.getElementById("popBtn");
+        // popBtn.onclick = function () {
+        //     var myNewWindow = window.open("", "New Window", "width = 400, height = 400");
+        //     myNewWindow.document.write("My New Window")
+        // }
+
+        // var a = document.createElement("a");
+        // a.href = "htttp://www.googlee"
+
+        // var linkBox = document.getElementById("linkBox");
+        // document.write(linkBox.parentNode.childNodes);
+
+        // var btn = document.getElementById("btn");
+        // var box = document.getElementById("box");
+
+        // btn.onclick = function () {
+        //     box.style.transform = "translateX(200px)"
+        // }
+
+        // box.onclick = function () {
+        //     box.style.height = "200px";
+        //     box.style.width = "200px";
+        //     window.open("https://www.youtube.com/", "YouTube", "width = 400, height = 400")
+
+        //     // box.style.transform = "scale(2)";
+        // }
+
+        // var email = document.getElementById("email");
+        // var pswd = document.getElementById("pswd");
+        // var age = document.getElementById("age");
+        // var submit = document.getElementById("submit");
+
+        // submit.onclick = function(){
+        //     if(email.value != "" && pswd.value != ""){
+        //         document.write("Form Sumitted")
+        //     }
+        //     // else{
+        //     //     document.write("Fill the fields")
+        //     // }
+
+        //     else if(age.value >=18 && age.value<=30)
+        //     {
+        //         document.write("Form Submitted")
+        //     }
+        //     else{
+        //         document.write("Enter Age range between 18 to 30")
+        //     }
+        // }
+
+
+        // var btn = document.getElementById("btn");
+        // btn.style.backgroundColor = "purple";
+
+        // var para = document.getElementsByClassName("para")[0];
+        // para.style.color = "red";
+
+
+        // var btn_1 = document.getElementById("btn_1");
+        // console.log(btn_1.innerHTML);
+
+        // document.getElementById("btn").textContent = "Not Yet!";
+        // document.getElementsByClassName("para")[0].textContent = "First Paragraph";
+        // document.getElementsByClassName("para")[1].textContent = "Second Paragraph";
+
+        // document.getElementsByTagName("p")[0].textContent = "TagName_1";
+        // document.getElementsByTagName("p")[1].textContent = "TagName_2";
+
+        // document.querySelector("#btn_2").textContent = "Query Selector btn";
+        // document.querySelector("p").textContent = "Query Selector";
+
+        // document.querySelectorAll(".para")[1].textContent = "Query Selector All_1";
+        // document.querySelectorAll("p")[0].textContent = "Query Selector All_2";
+
+        // function f1() {
+        //     let name = "Hamza";
+        //     const rol_num = 8796;
+        //     var age = 23;
+
+        //     console.log(name);
+        //     console.log(rol_num);
+        //     console.log(age);
+        // }
+
+        // f1();
+
+
+        // var x = "Ali";
+
+        // console.log(y);
+
+        // var a;
+        // console.log(a);
+
+        // var name = "Hello";
+        // name = 123;
+        // name = true;
+
+
+        // var stdName = prompt("Enter your Name");
+        // var rollNum = prompt("Enter your Roll Number");
+        // var clasS = prompt("Enter your Class");
+        // var age = prompt("Enter your Age");
+
+        // console.log("Your Name is " +stdName);
+        // console.log("Your Roll Number is " +rollNum);
+        // console.log("Your Class is " +clasS);
+        // console.log("Your Age is " +age);
+
+        // console.log(stdName+ " of Roll Number " +rollNum+ " is studying in " +clasS+ " class at the age of " +age);
+
+
+
+        // var a = 5;
+        // var b = "6";
+        // var c = a + parseInt(b);
+        // console.log(c);
+
+        // var a = 5;
+        // var b = 6;
+        // console.log(a == b);
+        // console.log(a != b);
+        // console.log(a > b);
+        // console.log(a < b);
+        // console.log(a >= b);
+        // console.log(a <= b);
+
+        // if (a < b) {
+        //     console.log("The value of a is less than b");
+        // }
+        // else{
+        //     console.log("The value of b is greater than a");
+        // }
+
+        // var marks = prompt("Enter your Marks");
+
+        // if (marks > 100) {
+        //     console.log("Enter the marks between 0 to 100");
+        // }
+        // else if (marks >= 80) {
+        //     console.log("A Grade")
+        // }
+        // else if (marks >= 70) {
+        //     console.log("B Grade")
+        // }
+        // else if (marks >= 60) {
+        //     console.log("C Grade")
+        // }
+        // else if (marks >= 50) {
+        //     console.log("D Grade")
+        // }
+        // else {
+        //     console.log("Fail")
+        // }
+
+        // var fruit = prompt("Enter the fruit name: ");
+
+        // switch (fruit) {
+        //     case 'orange':
+        //         console.log(fruit+" is Available");
+        //         break;
+        //     case 'banana':
+        //         console.log(fruit+" is Available");
+        //         break;
+        //     case 'apple':
+        //         console.log(fruit+" is Available");
+        //         break;
+        //     case 'grapes':
+        //         console.log(fruit+" is Available");
+        //         break;
+        //     case 'kivi':
+        //         console.log(fruit+" is Available");
+        //         break;
+        //     default:
+        //         console.log(fruit+" is not Available");
+        // }
+
+        // var fruit = prompt("Enter fruit name");
+        // switch (fruit) {
+        //     case "apple":
+        //         console.log(fruit + " is Available")
+        //         break;
+        //     case "banana":
+        //         console.log(fruit + " is Available")
+        //         break;
+        //     case "mangoe":
+        //         console.log(fruit + " is Available")
+        //         break;
+        //     case "grapes":
+        //         console.log(fruit + " is Available")
+        //         break;
+
+        //     default:
+        //         console.log( fruit + " is Not Available")
+        //         break;
+        // }
+
+        // var num = parseInt(prompt("Enter a Number "));
+
+        // console.log("You Enter " + num);
+        // for (var i = 0; i <= 5; i++) {
+        //     console.log(num + i);
+        // }
+
+        // var num = prompt("Enter a number");
+        // var isPrime = true;
+
+        // for (var i = 2; i <= num; i++) {
+        //     var result = num % i;
+
+        //     if (result == 0) {
+        //         console.log(num + " is not Prime Number");
+        //         isPrime = false;
+        //         break;
+        //     }
+        // }
+
+        // if(isPrime){
+        //     console.log(num + " is a Prime Number");
+        // }
+
+        // var num = prompt("Enter a number");
+        // var isPrime = true;
+
+        // for(var i=2; i<num; i++){
+        //     var result = num % i;
+        //     if(result == 0){
+        //         console.log(num + " is not a Prime Number");
+        //         isPrime = false;
+        //         break;
+        //     }
+        // }
+
+        // if(isPrime == true){
+        //     console.log(num + " is a Prime Number");
+        // }
+
+        // var food = ["Pizza", "Sandwich", "Burger", "Snacks"];
+        // console.log(food[1]);
+
+        // var food = [];
+        // food[0] = "Sandwitch";
+        // food[1] = "Pizza";
+        // food[2] = "Snacks";
+        // food[3] = "Burger";
+        // console.log(food);
+        // food[2] = "Biryani";
+        // console.log(food);
+
+        // var num = prompt("Enter a number");
+        // var isPrime =  true;
+        // for(var i = 2; i<num; i++){
+        //     var result = num % i;
+        //     if(result == 0){
+        //         console.log(num + " is not a prime number");
+        //         isPrime = false;
+        //         break;
+        //     }
+        // }
+        // if(isPrime == true){
+        //     console.log(num + " is Prime Number");
+        // }
+
+
+        // var food = ["Pizza", "Sandwich", "Burger", "Snacks"];
+        // console.log(food[1]);
+
+        // var food = [];
+        // food[0] = "Sandwitch";
+        // food[1] = "Pizza";
+        // food[2] = "Snacks";
+        // food[3] = "Burger";
+        // console.log(food);
+        // food[2] = "Biryani";
+        // console.log(food);
+        // food.push = "Analoge";
+        // console.log(food);
+
+        // var food = [];
+
+        // for (var i = 0; i <= 3; i++) {
+        //     food.push(prompt("Enter first food item"));
+        // }
+        // console.log(food);
+
+        // for (var i = 0; i <= 10; i++) {
+        //     for (var j = 0; j <= 3; j++) {
+        //         document.write(" ");
+        //     }
+        //     document.write("*")
+        // }
+
+        // var y = parseInt(prompt("Please enter a number"));
+        // var x = "*";
+
+        // for (var a = 1; a <= y; a++) {
+        //     console.log(x);
+        //     x += " * ";
+        // }
+
+        // var arr = [];
+        // for (var i = 0; i < 5; i++){
+        //     console.log(i*5);
+        // }
+
+        // var food = ["Pizza", "Burger", "Snacks"];
+        // for (var i = 0; i < food.length; i++) {
+        //     console.log(food[i]);
+        // }
+
+        // var num = [3, 4, 5, 6, 7, 8, 9];
+        // for (var i = 0; i < num.length; i++) {
+        //     num[i] = i*2;
+        //     console.log(num[i]);
+        // }
+
+        // var arr = [33, 43, 55, 65, 22, 89, 54];
+        // var input = parseInt(prompt("Enter a number"));
+
+        // var isFound = false
+
+        // for (var i = 0; i < arr.length; i++){
+        //     if(input === arr[i]){
+        //         console.log(arr[i] + " found at index of " + i);
+        //         isFound = true;
+        //         break;
+        //     }
+        // }
+
+        // if(isFound == false){
+        //     console.log("Not Found!")
+        // }
+
+        // var arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+        // var input = parseInt(prompt("Enter a number"));
+        // var isFound = false;
+
+        // for (var i = 0; i < arr.length; i++) {
+        //     if(input === arr[i]){
+        //         console.log(arr[i] + " found at index of " + i);
+        //         isFound = true;
+        //         break;
+        //     }
+        // }
+
+        // if(isFound == false){
+        //     console.log(input + " is not found!");
+        // }
+
+        // var foods = ["Pizza", "Burger", "Fries", "Nugets"];
+        // console.log(foods);
+        // var arr = foods.slice(2, 3);
+        // console.log(foods);
+        // console.log(arr);
+
+        // var num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+        // var input = parseInt(prompt("Enter a number"));
+        // var isFound = false;
+
+        // for (var i = 0; i < num.length; i++) {
+        //     if(num[i] === input){
+        //         console.log(input + " is found at index of " + i);
+        //         isFound = true;
+        //         break;
+        //     }
+        // }
+
+        // if(isFound == false){
+        //     console.log("Not Found!");
+        // }
+
+        // var num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+        // var input = parseInt(prompt("Enter a number: "));
+
+        // var isFound = false;
+
+        // for(var i = 0; i < num.length; i++){
+        //     if(num[i] === input){
+        //         console.log(input + " is found at index of " + i);
+        //         isFound = true;
+        //         break;
+        //     }
+        // }
+
+        // if(isFound == false){
+        //     console.log("Not Found!");
+        // }
+
+        // var a = "To be or not to be";
+        // console.log(a.length);
+        // var b = a.indexOf("be", 10);
+        // var c = a.lastIndexOf("be", 10);
+        // console.log(b);
+        // console.log(c);
+
+        // var food = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+        // console.log(food);
+        // food.splice(4, 1, 50);
+        // console.log(food);
+
+        // var str = "TO EVERY ACTION THERE IS ALWAYS EQUAL BUT IN OPPOSITE DIRECTION";
+        // var updateStr = str.toLowerCase();
+        // console.log(updateStr);
+
+        // var arr = [11, 22, 33, 44];
+        // console.log("Array "+arr);
+        // for(var i = 0; i < arr.length; i++){
+        //     var result = arr[i]*2;
+        //     console.log(result);
+        // }
+
+        // var trafficLight = prompt("Enter Light color");
+
+        // switch (trafficLight) {
+        //     case "red":
+        //         console.log("Stop!");
+        //         break;
+        //     case "yellow":
+        //         console.log("Be ready!");
+        //         break;
+        //     case "green":
+        //         console.log("Go!");
+        //         break;
+        //     default:
+        //         console.log("Wrong Entry!")
+        // }
+
+        // Ternary Operator in conditional statements
+
+        // var a = 6;
+        // var b = 7;
+        // (a < b) ? console.log("B is greater than A") : console.log("A is greater than B");
+
+        // var a = 10;
+        // function increment() {
+        //     a++;
+        // }
+        // increment();
+        // console.log(a);
+
+        // function add(a, b) {
+        //     console.log(a + b);
+        // }
+        // add(10, 5);
+
+        // function sub(a, b) {
+        //     console.log(a - b);
+        // }
+        // sub(10, 5);
+
+
+        // function message(){
+        //     console.log("Hello World");
+        // }
+        // message();
+
+        // function multiply(num1, num2){
+        //     console.log(num1*num2);
+        // }
+        // multiply(3, 1);
+        // multiply(3, 2);
+        // multiply(3, 3);
+        // multiply(3, 4);
+        // multiply(3, 5);
+
+        // function multiply(num1, num2){
+        //     return num1*num2;
+        // }
+
+        // // var a = multiply(4, 3);
+        // console.log(multiply(5, 5));
+
+        // function studentsGrade(score){
+        //     if(score>=80){
+        //         console.log("A Grade")
+        //     }
+        //     else if(score>=70){
+        //         console.log("B Grade")
+        //     }
+        //     else if(score>=60){
+        //         console.log("C Grade")
+        //     }
+        //     else if(score>=50){
+        //         console.log("D Grade")
+        //     }
+        //     else if(score<50){
+        //         console.log("Fail")
+        //     }
+        //     else if(score>100 && score<0){
+        //         console.log("Wrong Input!")
+        //     }
+        //     else{
+        //         console.log("Fill the Field")
+        //     }
+        // }
+
+        // function findGrade(sub1, sub2, sub3){
+        //     return ((sub1 + sub2 + sub3)/3);
+        // }
+        // var score1 = findGrade(84, 68, 76);
+        // var score2 = findGrade(64, 58, 86);
+        // console.log("Score 1 : " + score1);
+        // console.log("Score 2 : " + score2);
+
+        // studentsGrade(score1);
+        // studentsGrade(score2);
+
+
+
+
+        //Anonymous Fucntion********
+
+        // function random(){
+        //     console.log("Random");
+        // }
+
+        // setTimeout(random, 2000);
+
+        // setTimeout(function(){
+        //     console.log("Set Time out Function")
+        // }, 2000);
+
+        // setInterval(function(){
+        //     console.log("Set Time out Function")
+        // }, 1000);
+
+        // var anonFunc = () =>{
+        //     console.log("Anonymous Function")
+        // }
+
+        // anonFunc();
+
+        // setTimeout( ()=>{
+        //     console.log("Hello World!");
+        // }, 2000 );
+
+        // setInterval( ()=> {
+        //     console.log("Hello World!");
+        // }, 2000 );
+
+
+
+        // setTimeout(function(){
+        //     var a = a + 1;
+        //     console.log(a);
+        // }, 1000);
+
+        // var a = ()=>{
+        //     console.log("Hello World!");
+        // }
+
+        // a();
+
+        // Recursion / Recursive Function...
+        // A Fucntion that it-self inside the function body is called Recursive function.
+        
+        // function factorial(n){
+        //     if(n==1){
+        //         return 1;
+        //     }
+        //     return n*factorial(n-1);
+        // }
+        // console.log(factorial(4));   // 4x3x2x1 = 24
+
+
+        // var a = parseInt(prompt("Enter First Number"));
+        // var b = parseInt(prompt("Enter Second Number"));
+
+        // console.log(sum(a, b));
+        // console.log(sub(a, b));
+        // console.log(mul(a, b));
+        // console.log(div(a, b));
+
+        // window.onclick = () =>{
+        //     console.log("Clicked!")
+        // }
+
+         
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- <script>console.log("Hamza")</script> -->
+</body>
+
+</html>

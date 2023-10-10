@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form >
+            <input type="text" class="form-input"  placeholder="Your name..">
+            <input type="phone" class="form-input" placeholder="Phone Number">  
+            <input type="email" class="form-input"  placeholder="email">
+
+            <input class="form-btn" type="button" value="Submit">
+        </form>
+    </div>
+
+    <script>
+
+        var input = document.getElementsByClassName("form-input");
+        var btn = document.getElementsByClassName("form-btn")[0];
+
+        btn.onclick = () =>{
+            var regexAlphabet = /^[A-Za-z]+$/;
+            var regexPhone = /^\d{11}$/;
+            var regexEmail = /^\S+@\S+\.\S+$/
+
+            if(input[0].value == "" || input[1].value == "" || input[2].value == ""){
+                alert("Fill all the fields");
+            }
+
+            else if(input[0].value.match(regexAlphabet) && input[1].value.match(regexPhone) && input[2].value.match(regexEmail)){
+                alert("Fields are filled correctly");
+            }
+
+            else{
+                alert("Format is not correct");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
