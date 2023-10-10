@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Console Work
+    
+    <script>
+        class Cat{
+            name = "Kiti";
+            color = "White";
+
+            walk(){
+                console.log("Walking");
+            }
+
+            eat(){
+                console.log("Eating");
+            }
+        }
+
+        var c1 = new Cat();
+        console.log(c1.color);
+        console.log(c1.name);
+        c1.walk();
+        c1.eat();
+
+        c1.color = "Black";
+        c1.name = "Tom";
+        console.log(c1.color);
+        console.log(c1.name);
+        
+    </script>
+    
+</body>
+</html>
