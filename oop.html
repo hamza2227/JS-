@@ -14,6 +14,9 @@
         class bike{
             model = "2019";
             make = "Honda";
+            price = 100000;
+
+            // Get Method
 
             getModel(){
                 return this.model;
@@ -22,11 +25,33 @@
             getMake(){
                 return this.make;
             }
+
+            getPrice(){
+                return this.price;
+            }
+
+            // Set Method
+
+            setModel(upComingModel){
+                this.model = upComingModel
+            }
+
+            setMake(upComingMake){
+                this.make = upComingMake
+            }
+
+            setPrice(upComingPrice){
+                this.price = upComingPrice
+            }
         }
 
         var bike1 = new bike();
+        bike1.setModel("2021");
+        bike1.setMake("Suzuki");
+        bike1.setPrice(120000);
         console.log(bike1.getModel());
         console.log(bike1.getMake());
+        console.log(bike1.getPrice());
 
     </script>
     
