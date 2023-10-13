@@ -16,6 +16,12 @@
             make = "Honda";
             price = 100000;
 
+            constructor(upComingModel, upComingMake, upComingPrice){
+                this.model = upComingModel;
+                this.make = upComingMake;
+                this.price = upComingPrice;
+            }
+
             // Get Method
 
             getModel(){
@@ -43,15 +49,20 @@
             setPrice(upComingPrice){
                 this.price = upComingPrice
             }
+
+            toString(){
+                return "Model: " + this.model + ", Make: " + this.make + ", Price: " + this.price;
+            }
         }
 
-        var bike1 = new bike();
-        bike1.setModel("2021");
-        bike1.setMake("Suzuki");
-        bike1.setPrice(120000);
-        console.log(bike1.getModel());
-        console.log(bike1.getMake());
-        console.log(bike1.getPrice());
+        var bike1 = new bike("2023", "United", 110000);
+        // bike1.setModel("2021");
+        // bike1.setMake("Suzuki");
+        // bike1.setPrice(120000);
+        // console.log(bike1.getModel());
+        // console.log(bike1.getMake());
+        // console.log(bike1.getPrice());
+        console.log(bike1.toString());
 
     </script>
     
